@@ -582,15 +582,15 @@
     </div>
 
     <div class="bid-panel">
-      <div class="airtable-setup" id="airtableSetup">
-        <h3>Airtable nog te koppelen</h3>
-        <p>Dit formulier en het biedingenoverzicht werken rechtstreeks met de Airtable-API. Zo koppel je ze:</p>
+      <div class="airtable-setup" id="sheetsSetup">
+        <h3>Google Sheets nog te koppelen</h3>
+        <p>Dit formulier en het biedingenoverzicht werken rechtstreeks met een Google Apps Script webapp, gekoppeld aan een Google Sheet. Zo koppel je ze:</p>
         <ol>
-          <li>Maak in Airtable een tabel met de velden <code>Bedrag</code> (Number of Currency), <code>Naam</code> (Single line text), <code>Telefoonnummer</code> (Phone number), <code>E-mailadres</code> (Email), <code>Akkoord voorwaarden</code> (Checkbox) en <code>Datum</code> (Single line text). De namen moeten exact zo overeenkomen, anders komen biedingen niet aan.</li>
-          <li>Maak een Personal Access Token op <code>airtable.com/create/tokens</code> met de scopes <code>data.records:read</code> en <code>data.records:write</code>, toegang beperkt tot alléén deze ene base.</li>
-          <li>Zoek in de paginacode naar <code>AIRTABLE_CONFIG</code> (in het <code>&lt;script&gt;</code>-gedeelte) en vul daar je <code>baseId</code>, <code>table</code>-naam en <code>token</code> in.</li>
+          <li>Maak een Google Sheet met een tabblad met de kolommen <code>Timestamp</code>, <code>Datum</code>, <code>Naam</code>, <code>Telefoonnummer</code>, <code>E-mailadres</code>, <code>Bedrag</code> en <code>Akkoord</code>.</li>
+          <li>Open in dat Sheet <code>Extensies → Apps Script</code>, plak de meegeleverde code en implementeer deze als webapp (Uitvoeren als: Ik, Toegang: Iedereen).</li>
+          <li>Zoek in de paginacode naar <code>SHEETS_CONFIG</code> (in het <code>&lt;script&gt;</code>-gedeelte) en vul daar je <code>webAppUrl</code> in.</li>
         </ol>
-        <p>Zodra alle drie zijn ingevuld, verschijnen het echte biedformulier en het live overzicht hier automatisch. Deze uitleg verdwijnt dan vanzelf.</p>
+        <p>Zodra de URL is ingevuld, verschijnen het echte biedformulier en het live overzicht hier automatisch. Deze uitleg verdwijnt dan vanzelf.</p>
       </div>
 
       <div id="liveArea" hidden>
@@ -635,59 +635,59 @@
       <details class="terms">
         <summary><span class="chev">›</span> Bekijk de volledige veilingvoorwaarden</summary>
         <div class="terms-body">
-          <p><strong>Aanvullende veilingvoorwaarden voor het Volvo WSI-miniatuurmodel</strong><br>Hardeman Isolatie B.V. | De Spil 2, 3774 SE Kootwijkerbroek | KvK 09096098</p>
-<p><strong>Veilingperiode: 7 tot en met 17 september 2026, tien veilingdagen (elke dag, met uitzondering van zondag 13 september 2026).</strong> Bieden is op elke veilingdag mogelijk van 08:00 tot 21:00 uur. Buiten deze tijdvakken kan niet worden geboden; de veiling wordt dan opgeschort en op de eerstvolgende veilingdag om 08:00 uur hervat, met het laatst geldende hoogste bod als uitgangspunt. Alleen biedingen die vóór 21:00 uur op de laatste veilingdag zijn ontvangen, tellen mee bij de vaststelling van het winnende bod.</p>
+          <p><strong>Aanvullende veilingvoorwaarden voor de Volvo WSI-miniatuurmodellen</strong><br>Hardeman Isolatie B.V. | De Spil 2, 3774 SE Kootwijkerbroek | KvK 09096098</p>
+<p>Hardeman Isolatie veilt gedurende 10 opeenvolgende <strong>Veilingdagen</strong> (iedere dag, met uitzondering van de zondag) telkens één nieuw WSI-miniatuurmodel van de Volvo trekker met dieplader. In totaal worden op deze wijze 10 exclusieve miniaturen geveild. Bieden is op iedere Veilingdag mogelijk van 08:00 tot 21:00 uur. Na sluiting van een Veilingdag om 21:00 uur gaat op de eerstvolgende Veilingdag een nieuw miniatuur onder de hamer.</p>
 
 <h4>Artikel 1: Organisator en toepasselijkheid</h4>
-<p>Deze veiling wordt georganiseerd door Hardeman Isolatie B.V., gevestigd aan De Spil 2, 3774 SE Kootwijkerbroek, ingeschreven bij de Kamer van Koophandel onder nummer 09096098, hierna: "Hardeman Isolatie". De veiling vindt niet plaats op de eigen bedrijfswebsite van Hardeman Isolatie, maar op het online veilingplatform waarop deze pagina staat, hierna: "het Platform". Deze aanvullende veilingvoorwaarden zijn van toepassing op de open online veiling van het op het Platform omschreven Volvo WSI-miniatuurmodel, hierna: "het Miniatuur". Op de veiling en de daaruit voortvloeiende koopovereenkomst zijn tevens de algemene voorwaarden van Hardeman Isolatie van toepassing, voor zover daarvan hier niet wordt afgeweken; bij strijdigheid prevaleren deze veilingvoorwaarden. Voor consumenten geldt dat deze voorwaarden uitsluitend van toepassing zijn voor zover niet in strijd met dwingendrechtelijke consumentenwetgeving, welke te allen tijde prevaleert.</p>
+<p>Deze veiling wordt georganiseerd door Hardeman Isolatie B.V., gevestigd aan De Spil 2, 3774 SE Kootwijkerbroek, ingeschreven bij de Kamer van Koophandel onder nummer 09096098, hierna: "Hardeman Isolatie". De veiling vindt niet plaats op de eigen bedrijfswebsite van Hardeman Isolatie, maar op het online veilingplatform waarop deze pagina staat, hierna: "het Platform". Deze aanvullende veilingvoorwaarden zijn van toepassing op de open online veiling van de op het Platform omschreven WSI-miniatuurmodellen van de Volvo trekker met dieplader; ieder afzonderlijk model wordt hierna aangeduid als "het Miniatuur" en de gezamenlijke 10 modellen als "de Miniaturen". Voor ieder Miniatuur wordt op een afzonderlijke Veilingdag, zoals gedefinieerd in artikel 2, een aparte veiling gehouden, waarop deze veilingvoorwaarden onverkort van toepassing zijn. Op de veiling en de daaruit voortvloeiende koopovereenkomst(en) zijn tevens de algemene voorwaarden van Hardeman Isolatie van toepassing, voor zover daarvan hier niet wordt afgeweken; bij strijdigheid prevaleren deze veilingvoorwaarden. Voor consumenten geldt dat deze voorwaarden uitsluitend van toepassing zijn voor zover niet in strijd met dwingendrechtelijke consumentenwetgeving, welke te allen tijde prevaleert.</p>
 
-<h4>Artikel 2: Open online veiling</h4>
-<p>De veiling vindt uitsluitend online plaats via het Platform en heeft het karakter van een open veiling: het actuele hoogste geldige bod wordt gedurende de looptijd voortdurend zichtbaar gemaakt en bijgewerkt voor alle deelnemers en bezoekers. De veiling loopt over tien veilingdagen, van 7 september 2026 tot en met 17 september 2026; er wordt elke dag geveild, met uitzondering van zondag 13 september 2026, waarop niet kan worden geboden. Op elke veilingdag is bieden mogelijk van 08:00 tot 21:00 uur; buiten deze tijdvakken kan niet worden geboden en wordt de veiling opgeschort tot de eerstvolgende veilingdag om 08:00 uur, met het laatst geldende hoogste bod als uitgangspunt. De veiling sluit definitief op de laatste veilingdag om 21:00 uur; alleen biedingen die vóór dit tijdstip, binnen de genoemde dagen en tijdvakken, volledig via het biedformulier op het Platform zijn ontvangen, tellen mee bij het bepalen van de uitslag. Het tijdstip van ontvangst door het biedingssysteem is bepalend; een te late verzending, internetstoring of andere technische vertraging aan de zijde van de deelnemer komt voor rekening van de deelnemer, behoudens voor zover dwingend recht anders bepaalt.</p>
+<h4>Artikel 2: Open online veiling en Veilingdagen</h4>
+<p>De veiling vindt uitsluitend online plaats via het Platform en heeft het karakter van een open veiling. Zij bestaat uit 10 opeenvolgende dagen waarop telkens één Miniatuur wordt geveild, hierna ieder afzonderlijk: een "Veilingdag"; op zondag vindt geen Veilingdag plaats en telt deze dag niet mee bij de 10 Veilingdagen. Gedurende iedere Veilingdag wordt het actuele hoogste geldige bod op het die dag geveilde Miniatuur voor alle deelnemers en bezoekers zichtbaar gemaakt en voortdurend bijgewerkt. Op iedere Veilingdag is bieden mogelijk van 08:00 tot 21:00 uur; een Veilingdag sluit definitief om 21:00 uur, waarna de veiling van het die dag geveilde Miniatuur eindigt en op de eerstvolgende Veilingdag de veiling van het volgende Miniatuur aanvangt. Alleen biedingen die vóór het sluitingstijdstip van de desbetreffende Veilingdag, binnen het genoemde tijdvak, volledig via het biedformulier op het Platform zijn ontvangen, worden meegenomen bij het bepalen van de uitslag voor het Miniatuur van die Veilingdag. Het tijdstip van ontvangst door het biedingssysteem is bepalend; een te late verzending, internetstoring of andere technische vertraging aan de zijde van de deelnemer komt voor rekening van de deelnemer, behoudens voor zover dwingend recht anders bepaalt.</p>
 
 <h4>Artikel 3: Deelname en geldigheid van een bod</h4>
-<p>Een deelnemer verstrekt bij het bod ten minste: (a) voor- en achternaam, (b) e-mailadres, (c) telefoonnummer, (d) het biedbedrag in euro's, en (e) de akkoordverklaring met deze veilingvoorwaarden en de toepasselijke algemene voorwaarden. Een deelnemer die als consument deelneemt, moet ten minste achttien jaar oud en handelingsbekwaam zijn. Een bod is slechts geldig wanneer het tijdig binnen de in artikel 2 genoemde dagen en tijdvakken is ontvangen, alle verplichte gegevens volledig en naar waarheid zijn ingevuld, het biedbedrag geldig en ondubbelzinnig hoger is dan het op dat moment geldende hoogste bod, akkoord is gegeven met de toepasselijke voorwaarden, en geen sprake is van fraude, misbruik, manipulatie, een kennelijke vergissing of andere omstandigheden waardoor het bod redelijkerwijs niet als geldig kan worden beschouwd. Hardeman Isolatie mag bij redelijke twijfel de identiteit of de verstrekte gegevens van een deelnemer controleren.</p>
+<p>Een deelnemer verstrekt bij het bod ten minste: (a) voor- en achternaam, (b) e-mailadres, (c) telefoonnummer, (d) het biedbedrag in euro's, en (e) de akkoordverklaring met deze veilingvoorwaarden en de toepasselijke algemene voorwaarden. Een deelnemer die als consument deelneemt, moet ten minste achttien jaar oud en handelingsbekwaam zijn. Een bod is slechts geldig wanneer het tijdig, binnen het voor de desbetreffende Veilingdag geldende tijdvak, door Hardeman Isolatie is ontvangen; alle verplichte gegevens volledig en naar waarheid zijn ingevuld; het biedbedrag geldig en ondubbelzinnig hoger is dan het op dat moment geldende hoogste bod voor het Miniatuur van die Veilingdag; akkoord is gegeven met de toepasselijke voorwaarden; en geen sprake is van fraude, misbruik, manipulatie, een kennelijke vergissing of andere omstandigheden waardoor het bod redelijkerwijs niet als geldig kan worden beschouwd. Hardeman Isolatie mag bij redelijke twijfel de identiteit of de verstrekte gegevens van een deelnemer controleren.</p>
 
 <h4>Artikel 4: Biedingen</h4>
-<p>Een deelnemer mag gedurende de veiling meerdere malen bieden; een bod is alleen geldig indien het hoger is dan het op dat moment actuele hoogste geldige bod, en een bod dat gelijk aan of lager is dan het actuele hoogste bod wordt niet in behandeling genomen. Hardeman Isolatie kan op de veilingpagina een minimale verhoging per nieuw bod vermelden; is dat het geval, dan is een nieuw bod alleen geldig indien het ten minste met dit bedrag hoger is. Een uitgebracht bod vormt een aanbod van de deelnemer om het Miniatuur voor het geboden bedrag te kopen en kan na ontvangst in beginsel niet worden gewijzigd of ingetrokken, onverminderd dwingendrechtelijke consumentenrechten zoals een eventueel wettelijk herroepingsrecht na totstandkoming van een koopovereenkomst; een deelnemer kan gedurende de looptijd wel telkens een nieuw, hoger bod uitbrengen. Het uitbrengen van een bod leidt op zichzelf nog niet tot een koopovereenkomst: die ontstaat pas nadat de veiling is gesloten, Hardeman Isolatie de biedingen heeft gecontroleerd en het winnende bod schriftelijk heeft bevestigd.</p>
+<p>Een deelnemer mag gedurende een Veilingdag meerdere malen bieden op het Miniatuur van die dag, en mag op meerdere Veilingdagen voor verschillende Miniaturen bieden. Een bod is alleen geldig indien het hoger is dan het op dat moment actuele hoogste geldige bod voor het Miniatuur van die Veilingdag; een bod dat gelijk aan of lager is dan het actuele hoogste bod voor dat Miniatuur wordt niet in behandeling genomen. Hardeman Isolatie kan op de veilingpagina van een Miniatuur een minimale verhoging per nieuw bod vermelden; is dat het geval, dan is een nieuw bod voor dat Miniatuur alleen geldig indien het ten minste met dit bedrag hoger is. Een uitgebracht bod vormt een aanbod van de deelnemer om het desbetreffende Miniatuur voor het geboden bedrag te kopen en kan na ontvangst in beginsel niet worden gewijzigd of ingetrokken, onverminderd dwingendrechtelijke consumentenrechten zoals een eventueel wettelijk herroepingsrecht na totstandkoming van een koopovereenkomst; een deelnemer kan gedurende de looptijd van de Veilingdag wel telkens een nieuw, hoger bod op hetzelfde Miniatuur uitbrengen. Het uitbrengen van een bod leidt op zichzelf nog niet tot een koopovereenkomst: die ontstaat voor een Miniatuur pas nadat de Veilingdag van dat Miniatuur is gesloten, Hardeman Isolatie de biedingen heeft gecontroleerd en het winnende bod schriftelijk heeft bevestigd.</p>
 
 <h4>Artikel 5: Vaststelling van het winnende bod</h4>
-<p>Na sluiting van de veiling op de laatste veilingdag om 21:00 uur controleert Hardeman Isolatie de ontvangen biedingen. Het Miniatuur wordt toegewezen aan de deelnemer die op het moment van sluiting het hoogste geldige bod heeft uitgebracht; er geldt geen minimumbod of reserveprijs, zodat het hoogste geldige bod na sluiting voor toewijzing in aanmerking komt ongeacht de hoogte ervan. Zouden door een storing in het biedingssysteem twee of meer deelnemers als houder van het hoogste geldige bod kunnen worden aangemerkt, dan geldt het bod dat volgens de administratie van Hardeman Isolatie als eerste volledig is ontvangen. De administratie en technische registratie van Hardeman Isolatie zijn leidend bij het vaststellen van hoogte, volgorde en tijdstip van ontvangst van de biedingen, behoudens aantoonbare fouten.</p>
+<p>Na sluiting van iedere Veilingdag om 21:00 uur controleert Hardeman Isolatie de voor het Miniatuur van die Veilingdag ontvangen biedingen. Het Miniatuur van die Veilingdag wordt toegewezen aan de deelnemer die op het moment van sluiting het hoogste geldige bod op dat Miniatuur heeft uitgebracht; er geldt geen minimumbod of reserveprijs, zodat het hoogste geldige bod na sluiting voor toewijzing in aanmerking komt ongeacht de hoogte ervan. Zouden door een storing in het biedingssysteem twee of meer deelnemers als houder van het hoogste geldige bod op hetzelfde Miniatuur kunnen worden aangemerkt, dan geldt het bod dat volgens de administratie van Hardeman Isolatie als eerste volledig is ontvangen. De administratie en technische registratie van Hardeman Isolatie zijn leidend bij het vaststellen van hoogte, volgorde en tijdstip van ontvangst van de biedingen, behoudens aantoonbare fouten.</p>
 
 <h4>Artikel 6: Ongeldige biedingen en uitsluiting</h4>
-<p>Hardeman Isolatie kan een bod ongeldig verklaren of een deelnemer van verdere deelname uitsluiten bij: (a) onjuiste of onvolledige persoonsgegevens, (b) fraude of een redelijk vermoeden daarvan, (c) manipulatie of een poging daartoe, (d) misbruik van de website of het biedformulier, (e) een kennelijke fout of vergissing in het bod, (f) een bod dat niet aan deze voorwaarden voldoet, (g) handelen in strijd met de wet, of (h) andere omstandigheden waardoor voortzetting van de deelname redelijkerwijs niet van Hardeman Isolatie kan worden verlangd — en zal deze bevoegdheid niet op willekeurige of discriminerende wijze toepassen. Wordt het hoogste bod ongeldig verklaard, dan geldt het eerstvolgende hoogste geldige bod als winnend.</p>
+<p>Hardeman Isolatie kan een bod ongeldig verklaren of een deelnemer van verdere deelname uitsluiten bij: (a) onjuiste of onvolledige persoonsgegevens, (b) fraude of een redelijk vermoeden daarvan, (c) manipulatie of een poging daartoe, (d) misbruik van de website of het biedformulier, (e) een kennelijke fout of vergissing in het bod, (f) een bod dat niet aan deze voorwaarden voldoet, (g) handelen in strijd met de wet, of (h) andere omstandigheden waardoor voortzetting van de deelname redelijkerwijs niet van Hardeman Isolatie kan worden verlangd — en zal deze bevoegdheid niet op willekeurige of discriminerende wijze toepassen. Wordt het hoogste bod op een Miniatuur ongeldig verklaard, dan geldt het eerstvolgende hoogste geldige bod op dat Miniatuur als winnend.</p>
 
 <h4>Artikel 7: Winnaar en totstandkoming koopovereenkomst</h4>
-<p>Na sluiting van de veiling stelt Hardeman Isolatie vast welke deelnemer het hoogste geldige bod heeft uitgebracht; de winnaar wordt zo spoedig mogelijk via het opgegeven e-mailadres en/of telefoonnummer geïnformeerd. De koopovereenkomst komt pas tot stand op het moment waarop Hardeman Isolatie schriftelijk aan de winnaar bevestigt dat het winnende bod is geaccepteerd en het Miniatuur aan hem of haar wordt toegewezen; een automatische ontvangstbevestiging van een uitgebracht bod geldt niet als aanvaarding of als bevestiging van een koopovereenkomst. De winnaar dient binnen drie werkdagen na verzending van de bevestiging te reageren en de instructies voor betaling en levering op te volgen.</p>
+<p>Na sluiting van iedere Veilingdag stelt Hardeman Isolatie vast welke deelnemer voor het Miniatuur van die dag het hoogste geldige bod heeft uitgebracht; de winnaar wordt zo spoedig mogelijk via het opgegeven e-mailadres en/of telefoonnummer geïnformeerd. De koopovereenkomst voor dat Miniatuur komt pas tot stand op het moment waarop Hardeman Isolatie schriftelijk aan de winnaar bevestigt dat het winnende bod is geaccepteerd en het Miniatuur aan hem of haar wordt toegewezen; een automatische ontvangstbevestiging van een uitgebracht bod geldt niet als aanvaarding of als bevestiging van een koopovereenkomst. De winnaar dient binnen drie werkdagen na verzending van de bevestiging te reageren en de instructies voor betaling en levering op te volgen.</p>
 
 <h4>Artikel 8: Verplichtingen van de winnaar en niet-nakoming</h4>
-<p>Na totstandkoming van de koopovereenkomst is de winnaar verplicht deze na te komen, waaronder de verplichting tot betaling en afname van het Miniatuur. Reageert de winnaar niet tijdig, betaalt hij niet tijdig, neemt hij het Miniatuur niet af of schiet hij anderszins tekort, dan is Hardeman Isolatie gerechtigd om, voor zover wettelijk vereist na een redelijke nadere termijn: (a) nakoming en betaling te verlangen, (b) de koopovereenkomst te ontbinden, (c) vergoeding van geleden schade te verlangen, en/of (d) andere wettelijke of contractuele rechten uit te oefenen; bij aanhoudend uitblijven van nakoming mag Hardeman Isolatie de vordering ter incasso uit handen geven en zo nodig juridische stappen ondernemen, waarbij rente, incassokosten en overige kosten voor zover wettelijk toegestaan op de winnaar worden verhaald. Wordt de koopovereenkomst met de winnaar rechtsgeldig beëindigd, dan kan Hardeman Isolatie het Miniatuur aanbieden aan de deelnemer met het eerstvolgende hoogste geldige bod, en zo nodig aan een volgende bieder; ook dan ontstaat een koopovereenkomst pas na schriftelijke bevestiging. Dit artikel laat dwingendrechtelijke consumentenrechten, waaronder een eventueel toepasselijk herroepingsrecht, onverlet.</p>
+<p>Na totstandkoming van een koopovereenkomst is de winnaar verplicht deze na te komen, waaronder de verplichting tot betaling en afname van het desbetreffende Miniatuur. Reageert de winnaar niet tijdig, betaalt hij niet tijdig, neemt hij het Miniatuur niet af of schiet hij anderszins tekort, dan is Hardeman Isolatie gerechtigd om, voor zover wettelijk vereist na een redelijke nadere termijn: (a) nakoming en betaling te verlangen, (b) de koopovereenkomst te ontbinden, (c) vergoeding van geleden schade te verlangen, en/of (d) andere wettelijke of contractuele rechten uit te oefenen; bij aanhoudend uitblijven van nakoming mag Hardeman Isolatie de vordering ter incasso uit handen geven en zo nodig juridische stappen ondernemen, waarbij rente, incassokosten en overige kosten voor zover wettelijk toegestaan op de winnaar worden verhaald. Wordt de koopovereenkomst met de winnaar rechtsgeldig beëindigd, dan kan Hardeman Isolatie het Miniatuur aanbieden aan de deelnemer met het eerstvolgende hoogste geldige bod op dat Miniatuur, en zo nodig aan een volgende bieder; ook dan ontstaat een koopovereenkomst pas na schriftelijke bevestiging. Dit artikel laat dwingendrechtelijke consumentenrechten, waaronder een eventueel toepasselijk herroepingsrecht, onverlet.</p>
 
 <h4>Artikel 9: Prijs en btw</h4>
-<p>Ieder biedbedrag wordt geacht inclusief eventueel verschuldigde btw te zijn en vormt de totale koopprijs van het Miniatuur, met uitzondering van eventuele verzendkosten die vooraf duidelijk aan de koper worden meegedeeld. <strong>De volledige opbrengst van het winnende biedbedrag komt ten goede aan Stichting Denbi</strong> en wordt door Hardeman Isolatie aan Stichting Denbi afgedragen.</p>
+<p>Ieder biedbedrag wordt geacht inclusief eventueel verschuldigde btw te zijn. Het winnende biedbedrag op een Miniatuur vormt de totale koopprijs van dat Miniatuur, met uitzondering van eventuele verzendkosten die vooraf duidelijk aan de koper worden meegedeeld. <strong>De volledige opbrengst van elk winnend biedbedrag komt ten goede aan Stichting Denbi</strong> en wordt door Hardeman Isolatie aan Stichting Denbi afgedragen. Stichting Denbi zet zich in voor betere medische zorg en onderwijs voor kansarme mensen in Ethiopië.</p>
 
 <h4>Artikel 10: Betaling</h4>
-<p>De winnaar ontvangt na toewijzing informatie over de wijze waarop de koopprijs moet worden betaald en dient deze binnen de aangegeven betalingstermijn te voldoen; de betaling vindt plaats aan Hardeman Isolatie, die de volledige ontvangen koopprijs afdraagt aan Stichting Denbi. Voor zakelijke kopers kan Hardeman Isolatie verlangen dat de volledige koopprijs vóór levering of verzending wordt voldaan; voor consumenten gelden de wettelijke regels omtrent (vooruit)betaling, en zal Hardeman Isolatie geen vooruitbetaling verlangen voor zover dit in strijd zou zijn met dwingendrechtelijke consumentenwetgeving. Biedt Hardeman Isolatie betaling bij afhalen aan, dan dient de volledige koopprijs uiterlijk bij overdracht van het Miniatuur te worden voldaan.</p>
+<p>De winnaar van een Miniatuur ontvangt na toewijzing informatie over de wijze waarop de koopprijs moet worden betaald en dient deze binnen de aangegeven betalingstermijn te voldoen; de betaling vindt plaats aan Hardeman Isolatie, die de volledige ontvangen koopprijs afdraagt aan Stichting Denbi. Voor zakelijke kopers kan Hardeman Isolatie verlangen dat de volledige koopprijs vóór levering of verzending wordt voldaan; voor consumenten gelden de wettelijke regels omtrent (vooruit)betaling, en zal Hardeman Isolatie geen vooruitbetaling verlangen voor zover dit in strijd zou zijn met dwingendrechtelijke consumentenwetgeving. Biedt Hardeman Isolatie betaling bij afhalen aan, dan dient de volledige koopprijs uiterlijk bij overdracht van het Miniatuur te worden voldaan.</p>
 
 <h4>Artikel 11: Levering, verzending en afhalen</h4>
-<p>Op de veilingpagina wordt vermeld of het Miniatuur uitsluitend kan worden afgehaald, kan worden verzonden, of beide; eventuele verzendkosten worden vooraf duidelijk bekendgemaakt. Wordt het Miniatuur verzonden, dan wordt met de winnaar een wijze van levering overeengekomen en gelden voor consumenten de wettelijke regels betreffende levering en risico-overgang. Wordt het Miniatuur afgehaald, dan gaat het risico in beginsel over op het moment waarop de koper het Miniatuur feitelijk in ontvangst neemt.</p>
+<p>Op de veilingpagina van een Miniatuur wordt vermeld of dat Miniatuur uitsluitend kan worden afgehaald, kan worden verzonden, of beide; eventuele verzendkosten worden vooraf duidelijk bekendgemaakt. Wordt een Miniatuur verzonden, dan wordt met de winnaar een wijze van levering overeengekomen en gelden voor consumenten de wettelijke regels betreffende levering en risico-overgang. Wordt een Miniatuur afgehaald, dan gaat het risico in beginsel over op het moment waarop de koper het Miniatuur feitelijk in ontvangst neemt.</p>
 
 <h4>Artikel 12: Eigendom</h4>
-<p>Het Miniatuur blijft eigendom van Hardeman Isolatie totdat de volledige koopprijs is voldaan; de wettelijke regels omtrent risico-overgang blijven onverminderd van toepassing.</p>
+<p>Een Miniatuur blijft eigendom van Hardeman Isolatie totdat de volledige koopprijs voor dat Miniatuur is voldaan; de wettelijke regels omtrent risico-overgang blijven onverminderd van toepassing.</p>
 
 <h4>Artikel 13: Consumentenrechten en herroeping</h4>
-<p>Een deelnemer die als natuurlijk persoon handelt voor doeleinden buiten zijn bedrijfs- of beroepsactiviteit geldt als consument. Omdat de veiling uitsluitend online plaatsvindt, kunnen op de daaruit voortvloeiende koopovereenkomst de wettelijke regels voor overeenkomsten op afstand van toepassing zijn: is de koper consument en geldt geen wettelijke uitzondering, dan heeft hij het recht de koopovereenkomst binnen veertien dagen na ontvangst van het Miniatuur zonder opgave van redenen te herroepen. Hardeman Isolatie informeert de consument vóór het sluiten van de koopovereenkomst over dit herroepingsrecht, de wijze van uitoefening en eventuele kosten van terugzending, stelt indien wettelijk vereist het modelformulier voor ontbinding ter beschikking, en biedt gedurende de herroepingstermijn de wettelijk vereiste online functie voor elektronische ontbinding aan. Na een geldige herroeping worden ontvangen betalingen terugbetaald overeenkomstig de daarvoor geldende wettelijke regels; de consument dient gedurende de bedenktijd zorgvuldig met het Miniatuur om te gaan en kan aansprakelijk zijn voor waardevermindering als hij verder gaat dan nodig om aard, kenmerken en werking vast te stellen, voor zover de wet dit toestaat. Niets in deze voorwaarden beperkt de wettelijke rechten van een consument ten aanzien van een product dat niet aan de overeenkomst beantwoordt.</p>
+<p>Een deelnemer die als natuurlijk persoon handelt voor doeleinden buiten zijn bedrijfs- of beroepsactiviteit geldt als consument. Omdat de veiling uitsluitend online plaatsvindt, kunnen op de daaruit voortvloeiende koopovereenkomst(en) de wettelijke regels voor overeenkomsten op afstand van toepassing zijn: is de koper consument en geldt geen wettelijke uitzondering, dan heeft hij het recht de koopovereenkomst voor het desbetreffende Miniatuur binnen veertien dagen na ontvangst daarvan zonder opgave van redenen te herroepen. Hardeman Isolatie informeert de consument vóór het sluiten van de koopovereenkomst over dit herroepingsrecht, de wijze van uitoefening en eventuele kosten van terugzending, stelt indien wettelijk vereist het modelformulier voor ontbinding ter beschikking, en biedt gedurende de herroepingstermijn de wettelijk vereiste online functie voor elektronische ontbinding aan. Na een geldige herroeping worden ontvangen betalingen terugbetaald overeenkomstig de daarvoor geldende wettelijke regels; de consument dient gedurende de bedenktijd zorgvuldig met het Miniatuur om te gaan en kan aansprakelijk zijn voor waardevermindering als hij verder gaat dan nodig om aard, kenmerken en werking vast te stellen, voor zover de wet dit toestaat. Niets in deze voorwaarden beperkt de wettelijke rechten van een consument ten aanzien van een product dat niet aan de overeenkomst beantwoordt.</p>
 
 <h4>Artikel 14: Wijziging, opschorting en annulering van de veiling</h4>
-<p>Hardeman Isolatie kan de veiling vóór de totstandkoming van een koopovereenkomst uitsluitend wijzigen, tijdelijk opschorten, verlengen of annuleren indien daarvoor een redelijke grond bestaat, zoals een technische storing, een fout in de veilingpagina of het biedingssysteem, fraude, misbruik, overmacht of een andere omstandigheid waardoor een eerlijk en correct verloop redelijkerwijs niet kan worden gewaarborgd; deze bevoegdheid is niet bedoeld om de verkoop uitsluitend vanwege de hoogte van het hoogste geldige bod te weigeren, en wordt niet willekeurig gebruikt. Een wezenlijke wijziging, opschorting, verlenging of annulering wordt waar mogelijk via het Platform en/of de website van Hardeman Isolatie bekendgemaakt.</p>
+<p>Hardeman Isolatie kan een Veilingdag of de veiling als geheel vóór de totstandkoming van de betreffende koopovereenkomst(en) uitsluitend wijzigen, tijdelijk opschorten, verlengen of annuleren indien daarvoor een redelijke grond bestaat, zoals een technische storing, een fout in de veilingpagina of het biedingssysteem, fraude, misbruik, overmacht of een andere omstandigheid waardoor een eerlijk en correct verloop redelijkerwijs niet kan worden gewaarborgd; deze bevoegdheid is niet bedoeld om de verkoop van een Miniatuur uitsluitend vanwege de hoogte van het hoogste geldige bod te weigeren, en wordt niet willekeurig gebruikt. Een wezenlijke wijziging, opschorting, verlenging of annulering wordt waar mogelijk via het Platform en/of de website van Hardeman Isolatie bekendgemaakt.</p>
 
 <h4>Artikel 15: Aansprakelijkheid</h4>
 <p>Hardeman Isolatie spant zich in om de veiling en het biedformulier naar behoren te laten functioneren, maar is voor zover wettelijk toegestaan niet aansprakelijk voor schade als gevolg van storingen in internet-, netwerk- of communicatievoorzieningen buiten haar redelijke invloedssfeer, noch voor het niet of te laat ontvangen van een bod als gevolg van een omstandigheid die niet aan Hardeman Isolatie kan worden toegerekend. Iedere beperking of uitsluiting van aansprakelijkheid geldt uitsluitend voor zover wettelijk toegestaan; voor consumenten worden wettelijke rechten en aansprakelijkheden door dit artikel niet verder uitgesloten of beperkt dan wettelijk is toegestaan.</p>
 
 <h4>Artikel 16: Persoonsgegevens</h4>
-<p>Hardeman Isolatie verwerkt de via het biedformulier verstrekte persoonsgegevens uitsluitend voor het organiseren en afwikkelen van de veiling, het beoordelen en registreren van biedingen, het vaststellen en benaderen van de winnaar en, waar van toepassing, het uitvoeren en administreren van de koopovereenkomst, en bewaart deze gegevens niet langer dan daarvoor noodzakelijk, tenzij een wettelijke verplichting langere bewaring vereist. Voor verdere informatie wordt verwezen naar het privacybeleid van Hardeman Isolatie; gegevens die voor deelname worden verstrekt, worden niet zonder afzonderlijke toestemming gebruikt voor commerciële e-mail of andere direct-marketingdoeleinden waarvoor die toestemming vereist is.</p>
+<p>Hardeman Isolatie verwerkt de via het biedformulier verstrekte persoonsgegevens uitsluitend voor het organiseren en afwikkelen van de veiling, het beoordelen en registreren van biedingen, het vaststellen en benaderen van de winnaars en, waar van toepassing, het uitvoeren en administreren van de koopovereenkomst(en), en bewaart deze gegevens niet langer dan daarvoor noodzakelijk, tenzij een wettelijke verplichting langere bewaring vereist. Voor verdere informatie wordt verwezen naar het privacybeleid van Hardeman Isolatie; gegevens die voor deelname worden verstrekt, worden niet zonder afzonderlijke toestemming gebruikt voor commerciële e-mail of andere direct-marketingdoeleinden waarvoor die toestemming vereist is.</p>
 
 <h4>Artikel 17: Verhouding tot de algemene voorwaarden</h4>
-<p>Naast deze veilingvoorwaarden zijn de algemene voorwaarden van Hardeman Isolatie van toepassing op de uit de veiling voortvloeiende koopovereenkomst; bij strijdigheid tussen beide prevaleren deze veilingvoorwaarden. Voor zover een bepaling tegenover een consument niet rechtsgeldig kan worden toegepast, geldt in plaats daarvan de betreffende dwingendrechtelijke wettelijke regeling.</p>
+<p>Naast deze veilingvoorwaarden zijn de algemene voorwaarden van Hardeman Isolatie van toepassing op de uit de veiling voortvloeiende koopovereenkomst(en); bij strijdigheid tussen beide prevaleren deze veilingvoorwaarden. Voor zover een bepaling tegenover een consument niet rechtsgeldig kan worden toegepast, geldt in plaats daarvan de betreffende dwingendrechtelijke wettelijke regeling.</p>
 
 <h4>Artikel 18: Slotbepalingen</h4>
 <p>Op de veiling, ieder uitgebracht bod en iedere daaruit voortvloeiende overeenkomst is Nederlands recht van toepassing; geschillen worden voorgelegd aan de bevoegde rechter. Blijkt een bepaling uit deze veilingvoorwaarden geheel of gedeeltelijk nietig, vernietigbaar of anderszins niet afdwingbaar, dan blijven de overige bepalingen zoveel mogelijk van kracht. In gevallen waarin deze veilingvoorwaarden niet voorzien, handelt Hardeman Isolatie op redelijke wijze en met inachtneming van de toepasselijke wet- en regelgeving.</p>
@@ -805,15 +805,13 @@
     }, true);
   })();
 
-  // Airtable integration: real bid form (POST) + public live board (GET), resets daily
+  // Google Sheets integration: real bid form (POST) + public live board (GET), resets daily
   (function(){
-    var AIRTABLE_CONFIG = {
-      baseId: 'appiXDfJMRlxfFMbz',
-      table: 'Table 1',
-      token: 'patwZZwotLUxZmhjr.750d1c3f19c0888c69bbde01c5acee514e2ae038d885832429eda821400a4bd8'
+    var SHEETS_CONFIG = {
+      webAppUrl: 'https://script.google.com/macros/s/AKfycbyJ7px6PbToKVIgVJCltDCQNz2T6ZZ8Svc474h0y6SR0ac72nSC3Fienf2l1LnOrK1i1Q/exec'
     };
 
-    var setup = document.getElementById('airtableSetup');
+    var setup = document.getElementById('sheetsSetup');
     var liveArea = document.getElementById('liveArea');
     var form = document.getElementById('bidForm');
     var board = document.getElementById('bidBoard');
@@ -821,9 +819,7 @@
     var submitBtn = document.getElementById('bfSubmit');
 
     function isConfigured(){
-      return AIRTABLE_CONFIG.baseId && AIRTABLE_CONFIG.baseId !== 'AIRTABLE_BASE_ID_HIER'
-        && AIRTABLE_CONFIG.table && AIRTABLE_CONFIG.table !== 'AIRTABLE_TABLE_NAAM_HIER'
-        && AIRTABLE_CONFIG.token && AIRTABLE_CONFIG.token !== 'AIRTABLE_TOKEN_HIER';
+      return SHEETS_CONFIG.webAppUrl && SHEETS_CONFIG.webAppUrl !== 'https://script.google.com/macros/s/AKfycbyJ7px6PbToKVIgVJCltDCQNz2T6ZZ8Svc474h0y6SR0ac72nSC3Fienf2l1LnOrK1i1Q/exec';
     }
 
     if(!isConfigured()){
@@ -833,18 +829,10 @@
     setup.style.display = 'none';
     liveArea.hidden = false;
 
-    function apiUrl(){
-      return 'https://api.airtable.com/v0/' + AIRTABLE_CONFIG.baseId + '/' + encodeURIComponent(AIRTABLE_CONFIG.table);
-    }
-
     function todayStr(){
       return new Intl.DateTimeFormat('en-CA', {
         timeZone: 'Europe/Amsterdam', year:'numeric', month:'2-digit', day:'2-digit'
       }).format(new Date());
-    }
-
-    function escapeFormulaValue(v){
-      return String(v).replace(/'/g, "\\'");
     }
 
     function renderBoard(records){
@@ -853,11 +841,11 @@
         return;
       }
       records.sort(function(a,b){
-        return (Number(b.fields['Bedrag']) || 0) - (Number(a.fields['Bedrag']) || 0);
+        return (Number(b.bedrag) || 0) - (Number(a.bedrag) || 0);
       });
       var html = records.map(function(r, i){
-        var naam = (r.fields['Naam'] || 'Anoniem');
-        var bedrag = Number(r.fields['Bedrag']) || 0;
+        var naam = (r.naam || 'Anoniem');
+        var bedrag = Number(r.bedrag) || 0;
         var rowCls = 'bid-board-row' + (i === 0 ? ' first' : '');
         return '<div class="' + rowCls + '"><span class="bid-rank">' + (i+1) + '</span>'
           + '<span class="bid-name">' + escapeHtml(naam) + '</span>'
@@ -873,22 +861,19 @@
     }
 
     function loadBoard(){
-      var formula = "{Datum}='" + escapeFormulaValue(todayStr()) + "'";
-      var url = apiUrl() + '?filterByFormula=' + encodeURIComponent(formula) + '&pageSize=100';
-      fetch(url, {
-        headers: { 'Authorization': 'Bearer ' + AIRTABLE_CONFIG.token }
-      }).then(function(res){
-        if(!res.ok) throw new Error('Airtable GET ' + res.status);
+      var url = SHEETS_CONFIG.webAppUrl + '?datum=' + encodeURIComponent(todayStr());
+      fetch(url).then(function(res){
+        if(!res.ok) throw new Error('Sheets GET ' + res.status);
         return res.json();
       }).then(function(data){
-        renderBoard(data.records || []);
+        renderBoard((data && data.records) || []);
       }).catch(function(){
         board.innerHTML = '<div class="bid-board-empty">Overzicht kon niet worden geladen. Probeer de pagina te verversen.</div>';
       });
     }
 
     loadBoard();
-    setInterval(loadBoard, 20000);
+    setInterval(loadBoard, 30000);
     window.addEventListener('focus', loadBoard);
 
     form.addEventListener('submit', function(e){
@@ -911,26 +896,24 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Bezig met verzenden…';
 
-      fetch(apiUrl(), {
+      // Body sent as a plain string (no explicit Content-Type header) so the browser
+      // defaults to text/plain, which keeps this a "simple request" and avoids a CORS
+      // preflight OPTIONS call — Apps Script web apps don't handle preflight reliably.
+      fetch(SHEETS_CONFIG.webAppUrl, {
         method: 'POST',
-        headers: {
-          'Authorization': 'Bearer ' + AIRTABLE_CONFIG.token,
-          'Content-Type': 'application/json'
-        },
         body: JSON.stringify({
-          fields: {
-            'Bedrag': bedrag,
-            'Naam': naam,
-            'Telefoonnummer': tel,
-            'E-mailadres': email,
-            'Akkoord voorwaarden': akkoord,
-            'Datum': todayStr()
-          }
+          bedrag: bedrag,
+          naam: naam,
+          tel: tel,
+          email: email,
+          akkoord: akkoord,
+          datum: todayStr()
         })
       }).then(function(res){
-        if(!res.ok) throw new Error('Airtable POST ' + res.status);
+        if(!res.ok) throw new Error('Sheets POST ' + res.status);
         return res.json();
-      }).then(function(){
+      }).then(function(data){
+        if(!data || !data.ok) throw new Error('Sheets POST failed');
         feedback.textContent = 'Je bod is geplaatst. Bedankt voor je bijdrage aan Stichting Denbi.';
         feedback.className = 'bid-feedback ok';
         form.reset();
