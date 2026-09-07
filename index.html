@@ -819,7 +819,8 @@
     var submitBtn = document.getElementById('bfSubmit');
 
     function isConfigured(){
-      return SHEETS_CONFIG.webAppUrl && SHEETS_CONFIG.webAppUrl !== 'https://script.google.com/macros/s/AKfycbyJ7px6PbToKVIgVJCltDCQNz2T6ZZ8Svc474h0y6SR0ac72nSC3Fienf2l1LnOrK1i1Q/exec';
+      var url = SHEETS_CONFIG.webAppUrl;
+      return !!url && /^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(url);
     }
 
     if(!isConfigured()){
